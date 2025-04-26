@@ -3,7 +3,6 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "John Doe"
@@ -75,8 +74,17 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; vue 3 lsp
-(add-hook 'vue-mode-hook #'lsp!)
-
 ;; relative number
-(setq display-line-numbers-type 'relative)
+;;(setq display-line-numbers-type 'relative)
+
+;; And the vanilla commands
+(map! :leader "h c" 'harpoon-clear)
+(map! :leader "h a" 'harpoon-add-file)
+;;(map! :leader "h m" 'harpoon-toggle-quick-menu)
+(map! :leader "h m" 'harpoon-quick-menu-hydra)
+(map! :leader "h 1" 'harpoon-go-to-1)
+(map! :leader "h 2" 'harpoon-go-to-2)
+(map! :leader "h 3" 'harpoon-go-to-3)
+(map! :leader "h 4" 'harpoon-go-to-4)
+(map! :leader "h 5" 'harpoon-go-to-5)
+(map! :leader "h 6" 'harpoon-go-to-6)
